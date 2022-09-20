@@ -1,0 +1,155 @@
+body{
+    background: #EB5757;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+$colors:(primary:rgb(163, 14, 14), secondary:white, tertiary:#000000, quaternary:wheat);
+
+.header{
+    background: linear-gradient(to bottom, #333333, #000000) no-repeat;
+    border-bottom: #414141 2px solid;
+    display: flex;
+    .Nombre{
+        color: map-get($colors, primary);
+        padding: 2% 0% 0% 0%;
+    }
+    .Nombre p{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .secciones{
+        color: map-get($colors, secondary);
+        display: flex;
+        justify-content: center;
+        padding: 2% 0% 0% 0%;
+        
+    }
+    .secciones a{
+        text-decoration: none;
+        color: map-get($colors, secondary);
+        padding: 1% 4% 0% 0%;
+    }
+    .secciones a:hover{
+        color: map-get($colors, primary);
+    }
+    .registro{
+        display: flex;
+        padding: 2% 0% 0% 0%;
+    }
+    .registro a h6:hover{
+        color: map-get($colors, primary);
+    }
+    .registro img{
+        padding: 0% 0% 0% 0%;
+    }
+    .registro h6{
+        color: map-get($colors, quaternary);
+    }
+    .registro a{
+        text-decoration: none;
+        padding: 0% 3% 0% 3%;
+    }
+}
+
+.SobreNosotros{
+    margin: 5% 10% 0% 10%;
+    border-radius: 10px;
+    
+    background: map-get($colors, tertiary);  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    
+border-bottom: #eeecec 2px solid;
+
+color: map-get($colors, secondary);
+padding: 2% 0% 2% 20%;
+
+font-family: "Alegreya Sans", Arial, Tahoma, sans-serif;
+font-weight: 700;
+font-size: 350%;
+
+}
+
+.informacionExtra p{
+    background: rgba( 255, 245, 245, 0.65 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 13.5px );
+-webkit-backdrop-filter: blur( 13.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    margin: 1% 0% 0% 0%;
+}
+
+.footer{
+    background-color: rgb(218, 210, 210);
+    margin: 5% 0% 0% 0%;
+    padding: 0% 0% 2% 0%;
+    border-radius: 10px;
+}
+
+
+@mixin btn-style($background, $typography){
+    background-color: $background;
+    color: $typography;
+}
+
+.botonpag{ 
+    margin-top: 10%;
+    border-radius: 10px;
+}
+
+.anterior{
+    @extend .botonpag;
+    @include btn-style(#000000,wheat);
+}
+.siguiente{
+    @extend .botonpag;
+    @include btn-style(#000000,wheat);
+    margin-left: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:480px){
+    .header{
+        display: inline-block;
+    }
+    .header img{
+        padding-left: 35%;
+    }
+    .nombre{
+        padding-left: 27%;
+    }
+    .secciones{
+        font-size: 60%;
+        font-weight: 600;
+        background: linear-gradient(to bottom, #A40606, #3F0D12) no-repeat;
+    }
+    .registro{
+        padding: 5% 0% 2% 0%;
+    }
+    .test img{
+        height: 100px;
+        padding: 5% 0% 0% 0%;
+    }
+    .Contactanos{
+        font-size: 250%;
+    }
+}
+
